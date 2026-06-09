@@ -1,8 +1,8 @@
 package ru.job4j.action;
 
 import ru.job4j.tracker.Input;
+import ru.job4j.tracker.MemTracker;
 import ru.job4j.tracker.Output;
-import ru.job4j.tracker.Tracker;
 
 public class Exit implements UserAction {
     private final Output out;
@@ -17,7 +17,7 @@ public class Exit implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, MemTracker memTracker) {
         out.println("=== Завершение программы ===");
         return false;
     }

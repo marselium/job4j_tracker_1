@@ -17,10 +17,10 @@ public class FindByName implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, MemTracker memTracker) {
         out.println("=== Вывод заявок по имени ===");
         String name = input.askStr("Введите имя: ");
-        List<Item> items = tracker.findByName(name);
+        List<Item> items = memTracker.findByName(name);
         if (!items.isEmpty()) {
             for (Item item : items) {
                 out.println(item);
